@@ -1,9 +1,13 @@
 //
 // oak_particle.function
 //
-// Demo to expose a function on particle
-
-// switch the LED on with:
+// Demo to expose a function on Particle.io - pin 5 controlled from 
+// Particle.io api call.  Heartbeat on pin 1
+//
+// ver Date       Author       Comment
+// 1.0 30/01/2016 ajpowell     Initial version
+//
+// Switch the LED on with:
 //
 // curl https://api.particle.io/v1/devices/{DEVICE_ID}/led -d access_token={ACCESS_TOKEN} -d "args=off"
 //
