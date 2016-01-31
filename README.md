@@ -15,11 +15,16 @@ Simple sketch to flash the LED attached to pin 1
 Sketch to write a variable to Particle.io and make it available via an api call.
 ###oak_particle.function
 Sketch to expose a function on Particle.io - this can be called to switch an LED on or off.
+###oak_1wire_ds18b20
+Code does now compile, you need to edit pins_arduino.h to add 
+```
+#define ARDUINO_ARCH_ESP8266 1
+```
+Raised issue #22 against OakCore for this
 
 
 ## WIP
 
 ###oak_digiLED
 Code compiles, but does not update LED
-###oak_1wire_ds18b20
-Code does not compile - raise issue #22 against OakCore for this
+
