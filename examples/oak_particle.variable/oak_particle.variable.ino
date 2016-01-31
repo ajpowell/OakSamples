@@ -2,7 +2,11 @@
 // oak_particle.variable
 //
 // Demo to publish an integer value to particle
-
+// Integer is incremented once per second - a 'heartbeat' triggers the LED on pin1 each second too.
+//
+// ver Date       Author       Comment
+// 1.0 30/01/2016 ajpowell     Initial version
+//
 // Value is accessible at
 
 //https://api.particle.io/v1/devices/{DEVICE_ID}/{VARIABLE}?access_token={ACCESS_TOKEN}
