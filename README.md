@@ -15,3 +15,11 @@ Simple sketch to flash the LED attached to pin 1
 Sketch to write a variable to Particle.io and make it available via an api call.
 ###oak_particle.function
 Sketch to expose a function on Particle.io - this can be called to switch an LED on or off.
+
+
+## WIP
+
+###oak_digiLED
+Code compiles, but does not update LED
+###oak_1wire_ds18b20
+Code does not compile - raise issue #22 against OakCore for this
