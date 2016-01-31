@@ -8,12 +8,13 @@
 // http://milesburton.com/Dallas_Temperature_Control_Library
 
 // ver Date       Author       Comment
-// 1.0 30/01/2016 ajpowell     Updated for Digistump Oak - using Particle.delay() 
-//                             rather than delay()
+// 1.0 30/01/2016 ajpowell     Updated for Digistump Oak - using Particle.delay() rather than delay()
+// 1.1 31/01/2016 ajpowell     Minor update to comment to connect dallas device pin 3 to Vcc
+//
 // Connect dallas device:
 // pin 1 to ground
 // pin 2 to pin 5 of oak and via 4k7 resistor to Vcc
-// pin 3 unconnected
+// pin 3 to Vcc pin on Oak
 
 // Changes to code:
 //    Use of 5 pin to connect to dallas device
