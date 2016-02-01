@@ -10,6 +10,7 @@
 // ver Date       Author       Comment
 // 1.0 30/01/2016 ajpowell     Updated for Digistump Oak - using Particle.delay() rather than delay()
 // 1.1 31/01/2016 ajpowell     Minor update to comment to connect dallas device pin 3 to Vcc
+// 1.2 01/02/2016 ajpowell     Changed serial baud rate to 74880 (to match boot data from esp
 //
 // Connect dallas device:
 // pin 1 to ground
@@ -23,7 +24,7 @@
 OneWire  ds(5);  // on pin 5 (a 4.7K resistor )
 
 void setup() {
-  Serial.begin(57600);
+  Serial.begin(74880);
 
 }
 
