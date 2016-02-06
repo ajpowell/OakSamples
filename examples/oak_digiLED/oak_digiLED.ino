@@ -6,6 +6,7 @@
 //                             rather than delay()
 // 1.1 01/02/2016 ajpowell     Added Serial output for debugging
 // 1.2 06/02/2016 ajpowell     Fixes based on comments on Digistump forum
+//                             Removed Serial statements as Neopixel conflicts and uses port 4
 
 #include <Adafruit_NeoPixel.h>
 
@@ -72,13 +73,11 @@ void setup()
   //pinMode ( 5, OUTPUT ); // See detail above
   //digitalWrite ( 5, 0 ); // See detail above
   
-  Serial.begin(74880);
   pixels.begin(); // This initializes the NeoPixel library.
 
   pinMode ( 4, INPUT ); //the constructor and begin will set this up as an output, change it back to an input if desired
   
   pixels.show(); // Initialize all pixels to 'off'
-  Serial.println("\n oak_digiLED\n");
 }
  
 void loop()
@@ -86,37 +85,30 @@ void loop()
   // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
   // in Red,Green,Blue order
 
-  Serial.println("White...");
   pixels.setPixelColor(0, pixels.Color(255, 255, 255)); //white
   pixels.show(); // This sends the updated pixel color to the hardware.
   Particle.delay(delayval); // Delay for a period of time (in milliseconds).
 
-  Serial.println("Cyan...");
   pixels.setPixelColor(0, pixels.Color(0, 255, 255)); //cyan
   pixels.show();
   Particle.delay(delayval);
 
-  Serial.println("Violet...");
   pixels.setPixelColor(0, pixels.Color(255, 0, 255)); //violet
   pixels.show();
   Particle.delay(delayval);
 
-  Serial.println("Yellow...");
   pixels.setPixelColor(0, pixels.Color(255, 255, 0)); //yellow
   pixels.show();
   Particle.delay(delayval);
 
-  Serial.println("Red...");
   pixels.setPixelColor(0, pixels.Color(255, 0, 0)); //red
   pixels.show();
   Particle.delay(delayval);
-
-  Serial.println("Green...");
+  
   pixels.setPixelColor(0, pixels.Color(0, 255, 0)); //green
   pixels.show();
   Particle.delay(delayval);
 
-  Serial.println("Blue...");
   pixels.setPixelColor(0, pixels.Color(0, 0, 255)); //blue
   pixels.show();
   Particle.delay(delayval);
