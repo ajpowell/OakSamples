@@ -22,6 +22,8 @@ Sketch to test if device is connected to Particle
 Sketch to get the device name from Particle
 ###oak_particle.deviceip
 Sketch to get the device IP address from Particle
+###oak_digiLED
+Code compiles and now works - needed tweak due to mapping Oak and GPIO outputs
 
 ###oak_1wire_ds18b20
 Code does now compiles and executes - you need to edit pins_arduino.h to add 
@@ -30,9 +32,6 @@ Code does now compiles and executes - you need to edit pins_arduino.h to add
 ```
 Raised issue #22 against OakCore for this.
 
-
 ## WIP
 
-###oak_digiLED
-Code compiles, but does not update LED
 
