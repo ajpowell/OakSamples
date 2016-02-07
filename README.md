@@ -24,6 +24,10 @@ Sketch to get the device name from Particle
 Sketch to get the device IP address from Particle
 ###oak_digiLED
 Code compiles and now works - needed tweak due to mapping Oak and GPIO outputs
+###oak_particle.digiLED-SetColour
+Sketch using Particle.io function to set the colour of a DigiLED
+###oak_httpclient.digiLED_CheerLights
+Sketch using ESP8266 HTTP client to get colour from CheerLights API and set colour on DigiLED
 
 ###oak_1wire_ds18b20
 Code does now compiles and executes - you need to edit pins_arduino.h to add 
