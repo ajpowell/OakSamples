@@ -9,6 +9,7 @@
 // ver Date       Author       Comment
 // 1.0 30/01/2016 ajpowell     Initial version
 // 1.1 01/02/2016 ajpowell     Edited to use BUILTIN_LED
+//                             Double flash every four seconds
 
 // BUILTIN_LED is defined in oak/pins_arduino.h
 // static const uint8_t BUILTIN_LED = 1;
@@ -23,5 +24,10 @@ void loop() {
   digitalWrite(BUILTIN_LED, HIGH);   // turn the LED on (HIGH is the voltage level)
   Particle.delay(100);               // wait for a tenth second
   digitalWrite(BUILTIN_LED, LOW);    // turn the LED off by making the voltage LOW
-  Particle.delay(4000);               // wait for a second
+  Particle.delay(100);               // wait for a tenth second
+  digitalWrite(BUILTIN_LED, HIGH);   // turn the LED on (HIGH is the voltage level)
+  Particle.delay(100);               // wait for a tenth second
+  digitalWrite(BUILTIN_LED, LOW);    // turn the LED off by making the voltage LOW
+  
+  Particle.delay(4000);               // wait for four seconds
 }

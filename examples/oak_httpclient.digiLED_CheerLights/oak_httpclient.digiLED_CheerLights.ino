@@ -15,8 +15,8 @@
 // 1.0 07/02/2016 ajpowell     Initial version
 
 // Would be nice to be able to pick these up from the particle.io config...
-#define WIFI_SSID     "xxxxxx"
-#define WIFI_PASSWORD "xxxxxxx"
+#define WIFI_SSID     "xxxxx"
+#define WIFI_PASSWORD "xxxxxxxxxx"
 
 #define BRIGHTNESS    128
 
@@ -153,8 +153,30 @@ void loop() {
             }
         } else {
             //USE_SERIAL.print("[HTTP] GET... failed, no connection or no HTTP server\n");
+            for(int i=0; i<2; i++) {
+               // On
+              pixels.setPixelColor(0, 255, 0, 0);
+              pixels.show();
+              delay(100);
+              // Off
+              pixels.setPixelColor(0, 0, 0, 0);
+              pixels.show();
+              delay(200);
+           }
+
         }
-    }
+     } else {
+         for(int i=0; i<4; i++) {
+            // On
+            pixels.setPixelColor(0, 255, 0, 0);
+            pixels.show();
+            delay(100);
+            // Off
+            pixels.setPixelColor(0, 0, 0, 0);
+            pixels.show();
+            delay(200);
+         }
+     }
 
     Particle.delay(10000);
 }
