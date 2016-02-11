@@ -13,6 +13,7 @@
 //
 // ver Date       Author       Comment
 // 1.0 07/02/2016 ajpowell     Initial version
+// 1.1 10/02/2016 ajpowell     Updated to use DNS name rather than IP address
 
 // Would be nice to be able to pick these up from the particle.io config...
 #define WIFI_SSID     "xxxxx"
@@ -88,7 +89,7 @@ void loop() {
         HTTPClient http;
         
         // Configure target server and url
-        http.begin("144.212.80.11", 80, "/channels/1417/field/1/last.txt"); //HTTP
+        http.begin("api.thingspeak.com", 80, "/channels/1417/field/1/last.txt"); //HTTP
 
         // start connection and send HTTP header
         int httpCode = http.GET();
@@ -165,18 +166,7 @@ void loop() {
            }
 
         }
-     } else {
-         for(int i=0; i<4; i++) {
-            // On
-            pixels.setPixelColor(0, 255, 0, 0);
-            pixels.show();
-            delay(100);
-            // Off
-            pixels.setPixelColor(0, 0, 0, 0);
-            pixels.show();
-            delay(200);
-         }
-     }
+     } 
 
     Particle.delay(10000);
 }
